@@ -23,8 +23,7 @@ module Api
 
       def user_detail
         proc_code = Proc.new do
-
-          @user = User.find_by_auth_token(params['auth_token'])
+          @user = User.find_by_auth_token(params[:auth_token])
           if @user.valid?
             @data = @user
           end
