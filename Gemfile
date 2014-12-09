@@ -25,7 +25,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -69,6 +69,8 @@ group :development, :test do
   gem "awesome_print"
   gem "quiet_assets"
 end
+
+gem 'rails_12factor', group: :production
 
 group :it, :staging, :development, :test, :uat, :production do
   gem 'ruby-progressbar'

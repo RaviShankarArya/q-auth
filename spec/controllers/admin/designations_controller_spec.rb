@@ -2,8 +2,9 @@ require 'spec_helper'
 
 describe Admin::DesignationsController, :type => :controller do
 
-  let(:admin_user) {FactoryGirl.create(:admin_user)}
+
   let(:designation) {FactoryGirl.create(:designation)}
+  let(:admin_user) {FactoryGirl.create(:admin_user, :name => "testuser", :username =>"username", :email =>"abcd@yopmail.com", :biography => "Hi this is lorem ipsum", :password =>  ConfigCenter::Defaults::PASSWORD, :password_confirmation =>  ConfigCenter::Defaults::PASSWORD, :user_type =>"super_admin" )}
 
   before(:each) do
    session[:id] = admin_user.id
@@ -16,6 +17,7 @@ describe Admin::DesignationsController, :type => :controller do
     responsibilities: "Quality code"
   }
 }
+session[:id] = admin_user.id
 post :create, designation_params
 expect(Designation.count).to  eq 1
 end

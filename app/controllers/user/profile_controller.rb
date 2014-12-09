@@ -7,6 +7,12 @@ class User::ProfileController < User::BaseController
 
   def edit
     @user = @current_user
+
+    respond_to do |format|
+      format.html { }
+      format.json { render json: @user }
+      format.js {}
+    end
   end
 
   def update

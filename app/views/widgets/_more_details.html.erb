@@ -18,7 +18,7 @@
 <div class="panel panel-archon mt-10">
   <div class="panel-heading">
     <h3 class="panel-title"><%= heading %>
-      <%= link_to raw("<i class=\"icon-pencil icon-white mr-5\"></i> Edit"), user_edit_path, :class=>"btn btn-default btn-xs pull-right ml-10" %>
+      <%= link_to raw("<i class=\"icon-pencil icon-white mr-5\"></i> Edit"), user_edit_path, :class=>"btn btn-default btn-xs pull-right ml-10", :remote => true %>
       <span class="pull-right">
         <% if minimizable %>
           <a href="#" class="panel-minimize"><i class="fa fa-chevron-up"></i></a>

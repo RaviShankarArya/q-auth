@@ -1,7 +1,8 @@
+<div class="modal-body">
 <div class="row">
 
 
-	<div class="col-md-9">
+	<div class="col-md-11">
 		<div class="panel panel-archon">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -9,7 +10,7 @@
 				</h3>
 			</div>
 			<div class="profile-image">
-				<%= image_tag @user.profile_picture.image_url, :class=>"standard_image", :style => "height: 275px; width: 275px;" %>
+				<%= display_profile_picture(@user, 180, 180) %>
 				<br/>
 				<div class="profile-image-button">
 				<%= link_to 'Change photo', upload_image_link(@user, user_edit_path, :profile_picture), :remote => true, :class => "btn btn-primary btn-xs" %>
@@ -114,6 +115,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 
