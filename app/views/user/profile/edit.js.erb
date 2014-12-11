@@ -1,4 +1,5 @@
 heading = "Edit User";
 bodyContent = "<%= escape_javascript(render(:partial=>"form")) %>";
-showModal(heading, bodyContent);
+// showModal(heading, bodyContent);
+$('.js-panel-body').html(bodyContent);
 validateUserForm();

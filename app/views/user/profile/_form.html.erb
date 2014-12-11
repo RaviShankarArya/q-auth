@@ -3,7 +3,7 @@
 
 
 	<div class="col-md-11">
-		<div class="panel panel-archon">
+		<div class="panel panel-archon panel-width">
 			<div class="panel-heading">
 				<h3 class="panel-title">
 					My Profile
@@ -16,7 +16,7 @@
 				<%= link_to 'Change photo', upload_image_link(@user, user_edit_path, :profile_picture), :remote => true, :class => "btn btn-primary btn-xs" %>
 				</div>
 			</div>
-			<div class="panel-body">
+			<div class="panel-form">
 					<%= form_for( @user, :url => user_update_path, :html => {:id => "update_user_detail", :method => :put, :class => "form-horizontal"} ) do |f| %>
 					<div class="form-group">
 						<%= f.label :name, "Name", :for => "name", :class => "col-lg-3 control-label" %>
@@ -105,7 +105,7 @@
           <% end %>
         </div>
       </div>
-	  <div class="pull-right">
+	  <div class="pull-right panel-button">
 	  	<% button_text = "#{@user.new_record? ? "Create" : "Update"} Item" %>
 	  	<%= link_to "Cancle", user_profile_path, :class=>"btn btn-default" %>
 	  	<%= submit_tag button_text, "data-reset-text"=>button_text, "data-loading-text"=>"Saving ...", :class=>"btn btn-primary ml-10" %>
