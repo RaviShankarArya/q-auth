@@ -47,6 +47,17 @@ module Api
         render_json_response(proc_code)
       end
 
+
+      def user_detail
+        proc_code = Proc.new do
+          @user = User.find_by_auth_token(params[:auth_token])
+          if @user.valid?
+            @data = @user
+          end
+        end
+        render_json_response(proc_code)
+      end
+
       def user_params
         params.require(:user).permit(:name, :username, :phone, :skype, :linkedin, :city, :state, :country, :biography)
       end
