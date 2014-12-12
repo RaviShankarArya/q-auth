@@ -102,19 +102,20 @@
 
 .panel-form{
   padding-right: 0px;
-position: relative;
-left: 130px;
-top: -197px
+  position: relative;
+  left: 130px;
+  top: -197px
 }
 
 .panel-width{
-  width:904px;
-  height: 643px;
+  width: 945px;
+  height: 718px;
 }
 
 .panel-button{
-  position:relative;
-  left: -132px;
+  position: relative;
+  left: -165px;
+  top: 10px;
 }
 .profile-image-button {
   padding-left: 50px
